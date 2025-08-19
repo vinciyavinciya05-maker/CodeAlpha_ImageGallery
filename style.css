@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+
+    background: linear-gradient(135deg, #e6e6fa, #d8bfd8, #dda0dd);
+    background-attachment: fixed;
+}
+h1 {
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.filter-buttons button:hover {
+    background-color: violet;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 350px));
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    max-width: 350px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.5s, filter 0.5s;
+    cursor: pointer;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+.prev:hover, .next:hover, .close:hover {
+    color: violet;
+}
+
+
+.image-filters {
+    margin-top: 15px;
+}
+
+.image-filters button {
+    border: none;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.image-filters button:hover {
+    background-color: violet;
+}
+
+
+.hide {
+    display: none !important;
+}
+
+
+@media screen and (max-width: 600px) {
+    .prev, .next, .close { font-size: 30px; }
+}

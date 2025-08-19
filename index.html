@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>My Image Gallery🌼</h1>
+    
+    <div class="filter-buttons">
+        <button onclick="filterSelection('all')">Show All✨</button>
+        <button onclick="filterSelection('nature')">Nature🌲</button>
+        <button onclick="filterSelection('clouds')">Clouds⛅</button>
+        <button onclick="filterSelection('flowers')">Flowers🌼</button>
+        <button onclick="filterSelection('hair-bows')">Hair Bows🎀</button>
+        <button onclick="filterSelection('panda')">Panda🐼</button>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item nature">
+            <img src="img/Nature 1.jpg" alt="Nature 1" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item clouds">
+            <img src="img/Clouds 1.jpg" alt="Clouds 1" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item flowers">
+            <img src="img/Flower 1.jpg" alt="Flowers 1" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item hair-bows">
+            <img src="img/HairBow 1.jpg" alt="Hair Bow 1" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item panda">
+            <img src="img/Panda 1.jpg" alt="Panda 1" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item nature">
+            <img src="img/Nature 2.jpg" alt="Nature 2" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item clouds">
+            <img src="img/Clouds 2.jpg" alt="Clouds 2" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item flowers">
+            <img src="img/Flower 2.jpg" alt="Flowers 2" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item hair-bows">
+            <img src="img/HairBow 2.jpg" alt="Hair Bow 2" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item panda">
+            <img src="img/Panda 2.jpg" alt="Panda 2" onclick="openLightbox(this)">
+        </div>
+    </div>
+
+    
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
